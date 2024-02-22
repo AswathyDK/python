@@ -1,0 +1,5 @@
+inf=open("num.txt",'r+')
+line=inf.readlines()
+inff=open("dd.txt",'a')
+inff.writelines(line)
+inff.close()
