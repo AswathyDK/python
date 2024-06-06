@@ -1,0 +1,247 @@
+# LIST
+
+
+#take list input from user
+
+l=[]
+n=int(input("enter the list limit"))
+for i in range(n):
+    j=input(i)
+    l.append(j)
+print(l) 
+
+
+#assecs particular value using index
+
+l=[]
+n=int(input("enter the list limit"))
+for i in range(n):
+    j=input(i)
+    l.append(j)
+print(l)    
+print(l[0])
+
+#add value into a particular position
+
+l=[]
+n=int(input("enter the list limit"))
+for i in range(n):
+    j=input(i)
+    l.append(j)
+print(l)    
+x=int(input("enter the position"))
+l.insert(x,"blueberry")
+print(l)
+
+#length of list
+
+l=[]
+n=int(input("enter the list limit"))
+for i in range(n):
+    j=input(i)
+    l.append(j)
+print(l)    
+print(len(l))
+
+#length of particular value stored in list
+
+l=[]
+n=int(input("enter the list limit"))
+for i in range(n):
+    j=input(i)
+    l.append(j)
+print(l)    
+print(len(l[0]))
+
+
+#sentance into list
+
+l=[]
+n=input("enter sentance")
+l=list(n)
+print(l)
+
+output:  
+enter sentance hallo world
+['h', 'a', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+
+#sentance into list of words
+
+l=input("enter sentance")
+
+print(l.split())
+
+output:
+enter sentance hello i am
+['hello', 'i', 'am']
+
+
+# largest word in the sentance
+
+sentance=str(input("enter the sentance"))
+lists=sentance.split()
+largword=""
+for word in lists:
+    if(len(word)>len(largword)):
+        largword=word
+print(largword)  
+
+output:
+enter the sentance: hail world hello                        
+world
+
+
+# smallest word in the sentance
+
+sentance=str(input("enter the sentance"))
+lists=sentance.split()
+word=lists[0]
+for smallword in lists:
+    if(len(word)>len(smallword)):
+        word=smallword
+        
+print(word) 
+
+output:
+enter the sentance: hai i am aswathy
+i
+
+# count the words in a sentance
+
+sentance=str(input("enter the sentance"))
+lists=sentance.split()
+        
+print(len(lists)) 
+
+output:
+enter the sentance: hai hello i am
+4
+
+#print last word in a sentance
+
+sentance=str(input("enter the sentance"))
+lists=sentance.split()
+        
+print(lists[-1])        
+
+output:
+enter the sentance: hai hello 
+hello
+
+#print even length words in a string
+
+sentance=str(input("enter the sentance"))
+lists=sentance.split()
+        
+for word in lists:
+    if(len(word)%2==0):
+        print(word)
+
+output:
+enter the sentance: hai i love my parentss
+love
+my
+parentss
+
+#print odd length words in a string
+
+sentance=str(input("enter the sentance"))
+lists=sentance.split()
+        
+for word in lists:
+    if(len(word)%2!=0):
+        print(word)
+
+output:
+enter the sentance: i love my parents
+i
+parents
+
+#longest palindromword in a sentance
+
+sentance=str(input("enter the sentance"))
+lists=sentance.split()
+lenword=""
+for i in lists:
+    word=i[::-1]
+    
+    if(i==word):
+        
+        if(len(word)>len(lenword)):
+            lenword=word
+        
+print(lenword)
+
+output:
+enter the sentance: achan amma malayalam
+malayalam
+
+#second largest without usin loops
+
+n = int(input("enter the limit"))
+arr=[]
+for i in range(n):
+    j=input(i)
+    arr.append(j)
+x=max(arr)
+while x in arr:
+    arr.remove(x)
+print(max(arr)) 
+
+
+#second largest using for loop
+
+list1 = [2,3,6,6,5,]
+ 
+mx = max(list1[0], list1[1]) 
+secondmax = min(list1[0], list1[1]) 
+n = len(list1)
+for i in range(2,n): 
+    if list1[i] > mx: 
+        secondmax = mx
+        mx = list1[i] 
+    elif list1[i] > secondmax and \
+        mx != list1[i]: 
+        secondmax = list1[i]
+print("Second highest number is : ",\
+      str(secondmax))
+
+#second minium with loop
+
+list1 = [2,3,6,6,5,]
+ 
+mx = max(list1[0], list1[1]) 
+secondmax = min(list1[0], list1[1]) 
+n = len(list1)
+for i in range(2,n): 
+    if list1[i] < mx: 
+        secondmax = mx
+        mx = list1[i] 
+    elif list1[i] < secondmax and \
+        mx != list1[i]: 
+        secondmax = list1[i]
+print("Second highest number is : ",\
+      str(mx))
+
+#nested list
+
+list1=[]
+n=int(input("firstlimi"))
+k=int(input("secondlimit"))
+for i in range(n):
+    list1.append([])
+    for j in range(k):
+        name = input()
+        score = float(input())
+        list1[i].append(name)
+        list1[i].append(score)
+print(list1)
+
+output:
+firstlimi:2
+secondlimit:1
+anna
+32.45
+abi
+44.23
+[['anna', 32.45], ['abi', 44.23]]
